@@ -1,10 +1,10 @@
-const ADD_BOOK = 'bookstore/books/ADD_BOOK'
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK'
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = []
+const initialState = [];
 
 const books = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD_BOOK:
       return [
         ...state,
@@ -12,24 +12,20 @@ const books = (state = initialState, action) => {
           title: action.title,
           author: action.author,
           id: action.id,
-        }
-      ]
+        },
+      ];
     case REMOVE_BOOK:
       return [
-        ...state
-      ]
+        ...state,
+      ];
     default:
-      return state
+      return state;
   }
-}
+};
 
-const addBook = (title) => {
-  return { type: ADD_BOOK, payload: title }
-}
+const addBook = (title) => ({ type: ADD_BOOK, payload: title });
 
-const removeBook = (title) => {
-  return { type: REMOVE_BOOK, payload: title }
-}
+const removeBook = (title) => ({ type: REMOVE_BOOK, payload: title });
 
-export default books
-export { addBook, removeBook }
+export default books;
+export { addBook, removeBook };

@@ -1,11 +1,9 @@
 import React from 'react';
 
-class Categories extends React.PureComponent {
-  render() {
+const Categories = () => {
     return (
       <button type="button">Check Status</button>
     );
   }
-}
 
 export default Categories;

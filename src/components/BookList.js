@@ -1,8 +1,7 @@
 import React from 'react';
 import Book from './Book';
 
-class BookList extends React.PureComponent {
-  render() {
+const BookList = () => {
     const books = [
       {
         title: 'Book 1',
@@ -24,6 +23,5 @@ class BookList extends React.PureComponent {
       </ul>
     );
   }
-}
 
 export default BookList;

@@ -2,8 +2,7 @@ import React from 'react';
 import BookList from './BookList';
 import BookInput from './BookInput';
 
-class BooksContainer extends React.PureComponent {
-  render() {
+const BooksContainer = () => {
     return (
       <section>
         <BookList />
@@ -11,6 +10,5 @@ class BooksContainer extends React.PureComponent {
       </section>
     );
   }
-}
 
 export default BooksContainer;

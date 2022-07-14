@@ -1,35 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getBooks } from '../api';
 
 const initialState = {
-  books: [
-    {
-      title: 'The Lord of the Rings',
-      author: 'J.R.R Tolkien',
-      id: '29837928734',
-    },
-    {
-      title: 'The Call of Cthulhu',
-      author: 'H.P Lovecraft',
-      id: 'uyed7273rrd2',
-    },
-    {
-      title: 'Brave New World',
-      author: 'Aldous Huxley',
-      id: 'oijvow98934h7fe66',
-    },
-  ],
+  books: [],
+  status: null,
 };
 
 const books = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      state.books.push(action.payload);
-    },
-    removeBook: (state, action) => ({
+  extraReducers: {
+    [getBooks.pending]: (state) => ({
       ...state,
-      books: state.books.filter((book) => book.id !== action.payload),
+      status: 'loading',
+    }),
+    [getBooks.fulfilled]: (state, action) => ({
+      ...state,
+      status: 'success',
+      books: action.payload,
+    }),
+    [getBooks.rejected]: (state) => ({
+      ...state,
+      status: 'failed',
     }),
   },
 });

@@ -1,21 +1,22 @@
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addBook } from '../redux/books/books';
+import { addBooksThunk } from '../redux/api';
 
 const BookInput = () => {
+  const dispatch = useDispatch();
+
   const createBook = (title, author) => ({
     title,
     author,
-    id: nanoid(),
+    item_id: nanoid(),
+    category: 'TBD',
   });
 
-  const dispatch = useDispatch();
-
-  const newBook = (e) => {
+  const newBook = async (e) => {
     e.preventDefault();
     const title = e.target.title.value;
     const author = e.target.author.value;
-    dispatch(addBook(createBook(title, author)));
+    dispatch(addBooksThunk(createBook(title, author)));
     e.target.title.value = '';
     e.target.author.value = '';
   };

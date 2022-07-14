@@ -1,9 +1,16 @@
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getBooks } from '../redux/api';
 import BookInput from '../components/BookInput';
 import Book from '../components/Book';
 
 const BooksContainer = () => {
   const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   return (
     <section>

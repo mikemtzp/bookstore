@@ -13,12 +13,13 @@ const BooksContainer = () => {
   }, []);
 
   return (
-    <section>
+    <section style={{ padding: '1.5rem 5rem' }}>
       <ul>
         {books.map((book) => (
           <Book
             title={book.title}
             author={book.author}
+            category={book.category}
             key={book.id}
             id={book.id}
           />

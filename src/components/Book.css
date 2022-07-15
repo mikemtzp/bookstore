@@ -1,0 +1,113 @@
+.book {
+  list-style: none;
+  background-color: #fff;
+  padding: 1.2rem 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  font-family: 'Roboto Slab', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.book-data {
+  width: 50%;
+}
+
+.category {
+  color: rgba(18, 18, 18, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+.author {
+  color: rgba(67, 134, 191, 0.8);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tool-button {
+  background: none;
+  color: rgba(67, 134, 191, 0.8);
+  border: none;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.tool-button:hover {
+  color: rgb(54, 107, 153);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.button-divisor {
+  color: rgba(18, 18, 18, 0.2);
+  padding: 0 0.8rem;
+  font-size: 1.3rem;
+}
+
+.book-percentage {
+  margin-right: 4rem;
+  display: flex;
+}
+
+.percentage {
+  border: 3.5px solid rgba(18, 18, 18, 0.1);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50% 50%;
+}
+
+.percentage-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+
+.percentage-number {
+  font-size: 1.8rem;
+}
+
+.percentage-text {
+  color: rgba(18, 18, 18, 0.4);
+  font-size: 0.8rem;
+}
+
+.book-divisor {
+  height: 4rem;
+  width: 1px;
+  background-color: rgba(18, 18, 18, 0.1);
+}
+
+.book-chapter {
+  margin-left: 3rem;
+}
+
+.current-chapter {
+  font-size: 0.7rem;
+  color: rgba(18, 18, 18, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.chapter {
+  margin-bottom: 1rem;
+}
+
+.update-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #0290ff;
+  color: rgba(256, 256, 256, 0.9);
+  font-family: 'Roboto Slab', sans-serif;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.update-button:hover {
+  background-color: #0080e1;
+  transition: 0.5s;
+}

@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { addBooksThunk } from '../redux/api';
+import './BookInput.css';
 
 const BookInput = () => {
   const dispatch = useDispatch();
@@ -22,11 +23,15 @@ const BookInput = () => {
   };
 
   return (
-    <form onSubmit={newBook}>
-      <input type="text" name="title" placeholder="Book title" required />
-      <input type="text" name="author" placeholder="Author" required />
-      <button type="submit">ADD BOOK</button>
-    </form>
+    <div className="input-section">
+      <span className="line" />
+      <p className="input-title">ADD NEW BOOK</p>
+      <form className="add-form" onSubmit={newBook}>
+        <input className="title-input input" type="text" name="title" placeholder="Book title" required />
+        <input className="author-input input" type="text" name="author" placeholder="Author" required />
+        <button className="add-button" type="submit">ADD BOOK</button>
+      </form>
+    </div>
   );
 };
 

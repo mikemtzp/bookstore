@@ -8,6 +8,8 @@
 - Babel
 - Linters: Stylelint & ESlint
 
+## 💻 [Live demo](https://bookstore-mikemtzp.netlify.app/)
+
 ## 🧮 Prerequisites
 
 ### Install

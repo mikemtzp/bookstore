@@ -1,5 +1,5 @@
 # Bookstore
-> In this bookstore web app, you can add, edit, comment, and remove books. You will be able to navigate through a list of different authors' books. Data is preserved using the [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739). Built with React Js and Redux.
+> In this bookstore web app, you can add, and remove books. Data is preserved using the [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739). Built with React Js and Redux.
 
 ## 🛠️ Built With
 
